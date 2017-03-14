@@ -1,0 +1,20 @@
+{
+  "name": "xServer",
+  "version": "1.0.0",
+  "description": "Web server use Koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panxiuqing/xServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panxiuqing/xServer/issues"
+  },
+  "homepage": "https://github.com/panxiuqing/xServer#readme"
+}
