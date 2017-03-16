@@ -14,13 +14,17 @@ function router(routes) {
     }
 
     return async function (ctx, next) {
-        const url = ctx.request.url;
-        if (!route.has(url)) {
+        const path = ctx.path;
+        if (!route.has(path)) {
             await next();
         } else {
-            const handler = route.get(url);
-            const query = ctx.query;
-            ctx.body = handler(query);
+            ctx.cookies.set('name', 'abc')
+            const handler = route.get(path);
+            if (ctx.method === 'GET') {
+                ctx.body = handler(ctx.request.query);
+            } else {
+                ctx.body = handler(ctx);
+            }
         }
     }
 }

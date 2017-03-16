@@ -32,8 +32,22 @@ function success(s) {
     common(color.green, s);
 }
 
-module.exports.log = log;
-module.exports.warn = warn;
-module.exports.error = error;
-module.exports.success = success;
-module.exports.info = info;
+function logger(config) {
+    let time;
+    let resTime;
+    let res;
+    if (config.color) {
+        res = success;
+    } else {
+        res = log;
+    }
+    return async function (ctx, next) {
+        time = new Date();
+        log(`${ctx.method}: ${ctx.path} in...`);
+        await next();
+        resTime = new Date();
+        res(`RES: ${ctx.path} [${resTime - time}s]`);
+    }
+}
+
+module.exports = logger;
