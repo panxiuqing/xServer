@@ -18,7 +18,6 @@ function router(routes) {
         if (!route.has(path)) {
             await next();
         } else {
-            ctx.cookies.set('name', 'abc')
             const handler = route.get(path);
             if (ctx.method === 'GET') {
                 ctx.body = handler(ctx.request.query);

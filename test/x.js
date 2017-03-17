@@ -4,7 +4,12 @@ const config = {
     logger: {
         color: true,
     },
+    auth: {
+        includes: [],
+        excludes: ['/login']
+    },
     routes: {
+        '/login': () => { return 'login' },
         '/a': (query) => { return query }
     }
 }

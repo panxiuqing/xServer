@@ -33,8 +33,6 @@ function success(s) {
 }
 
 function logger(config) {
-    let time;
-    let resTime;
     let res;
     if (config.color) {
         res = success;
@@ -42,10 +40,10 @@ function logger(config) {
         res = log;
     }
     return async function (ctx, next) {
-        time = new Date();
+        const time = new Date();
         log(`${ctx.method}: ${ctx.path} in...`);
         await next();
-        resTime = new Date();
+        const resTime = new Date();
         res(`RES: ${ctx.path} [${resTime - time}s]`);
     }
 }
