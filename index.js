@@ -1,7 +1,7 @@
 const Koa = require('koa');
-const router = require('./src/lib/router');
-const logger = require('./src/lib/logger');
-const auth = require('./src/lib/auth');
+const router = require('./lib/router');
+const logger = require('./lib/logger');
+const auth = require('./lib/auth');
 
 class XServer {
     constructor (config) {
