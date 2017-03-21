@@ -8,6 +8,7 @@ const config = {
         includes: [],
         excludes: ['/login']
     },
+    static: '../www',
     routes: {
         '/login': () => { return 'login' },
         '/a': (query) => { return query }
