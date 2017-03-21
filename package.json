@@ -1,6 +1,6 @@
 {
-  "name": "xServer",
-  "version": "1.0.0",
+  "name": "xerver",
+  "version": "0.0.1",
   "description": "Web server use Koa",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,13 @@
     "url": "git+https://github.com/panxiuqing/xServer.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "panxiuqing",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/panxiuqing/xServer/issues"
   },
-  "homepage": "https://github.com/panxiuqing/xServer#readme"
+  "homepage": "https://github.com/panxiuqing/xServer#readme",
+  "dependencies": {
+    "koa": "^2.2.0"
+  }
 }
