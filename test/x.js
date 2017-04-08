@@ -13,7 +13,13 @@ const config = {
     routes: {
         '/login': () => { return 'login' },
         '/a': (query) => { return query }
-    }
+    },
+    // db: {
+    //     host: 'localhost',
+    //     user: 'me',
+    //     password: 'secret',
+    //     database: 'my_db'
+    // }
 }
 
 const xServer = new XServer(config);
