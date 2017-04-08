@@ -1,6 +1,6 @@
 {
   "name": "xerver",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Web server use Koa",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/panxiuqing/xServer#readme",
   "dependencies": {
-    "koa": "^2.2.0"
-  }
+    "koa": "^2.2.0",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {}
 }
