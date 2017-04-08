@@ -12,7 +12,12 @@ const config = {
     static: path.join(__dirname, '../www'),
     routes: {
         '/login': () => { return 'login' },
-        '/a': (query) => { return query }
+        '/a': (query) => { return query },
+        '/api/user': (query, data) => {
+            // post request
+            // query is url query
+            // data is post data
+        }
     },
     // db: {
     //     host: 'localhost',
