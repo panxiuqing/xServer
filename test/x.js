@@ -6,25 +6,23 @@ const config = {
         color: true,
     },
     auth: {
+        method: (cookie) => {
+            // return true or false
+            return cookie.get('id');
+        },
         includes: [],
         excludes: ['/login']
     },
     static: path.join(__dirname, '../www'),
     routes: {
-        '/login': () => { return 'login' },
+        '/login': (query, cookie) => { cookie.set('id', 'abc'); return 'a' },
         '/a': (query) => { return query },
-        '/api/user': (query, data) => {
+        '/api/user': (query, data, cookie) => {
             // post request
             // query is url query
             // data is post data
         }
     },
-    // db: {
-    //     host: 'localhost',
-    //     user: 'me',
-    //     password: 'secret',
-    //     database: 'my_db'
-    // }
 }
 
 const xServer = new XServer(config);

@@ -1,6 +1,6 @@
 {
   "name": "xerver",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Web server use Koa",
   "main": "index.js",
   "scripts": {
